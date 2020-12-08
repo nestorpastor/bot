@@ -1,0 +1,23 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "slack bot",
+  "main": "index.js",
+  "scripts": {
+    "deploy:development": "serverless deploy --stage dev --region us-east-1 -v",
+    "local-api": "serverless offline --stage dev --customer test --region us-east-1  --port 3000 -v --slack <Your_Slack_Token> --token <Your_Token> --mongodb <Your_Mongo_DB_URL>"
+  },
+  "author": "Nestor Pastor",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/web-api": "^5.14.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.5",
+    "sequelize": "^6.3.5",
+    "serverless": "^2.14.0",
+    "serverless-http": "^2.6.0",
+    "serverless-offline": "^6.8.0"
+  }
+}
